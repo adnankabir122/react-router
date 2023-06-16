@@ -1,15 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-  return (
-    <div>
-      <Link to="/home">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/products">Products</Link>
-      <Link to="/users">Users</Link>
-    </div>
-  )
-}
+    return (
+        <div>
+            <NavLink
+                to="/home"
+                className={({ isActive }) => (isActive ? "active" : "")}
+            >
+                Home
+            </NavLink>
+            <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+            >
+                About
+            </NavLink>
+            <NavLink
+                to="/products"
+                className={({ isActive }) => (isActive ? "active" : "")}
+            >
+                Products
+            </NavLink>
+            <NavLink
+                to="/users"
+                className={({ isActive }) => (isActive ? "active" : "")}
+            >
+                Users
+            </NavLink>
+        </div>
+    );
+};
 
-export default Header
+export default Header;

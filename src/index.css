@@ -1,3 +1,7 @@
 *{
     font-family: sans-serif
 }
+.active {
+    background: rgb(182, 93, 93);
+    color: white;
+}
